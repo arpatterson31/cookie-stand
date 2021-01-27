@@ -18,20 +18,23 @@ let seattleStore = {
   cookieArray: [],
   cookiesPerHour: function (){
     for (let i = 0; i < hours.length; i++){
-      this.cookieArray.push(this.customerPerHour * this.avgCookie);
+      this.cookieArray.push(Math.ceil(this.customerPerHour() * this.avgCookie));
     }
   },
   // a method to render list items
   render: function() {
-    for (let j = 0; j < this.cookieArray.length; j++){
+    for (let i = 0; i < this.cookieArray.length; i++){
+      // create element
       let li = document.createElement('li');
-      li.textContent = this.cookieArray[j];
+      // give it content
+      li.textContent = `${hours[i]}: ${(this.cookieArray[i])} cookies`;
       seattleList.appendChild(li);
     }
   }
 };
 
 seattleStore.render();
-console.log(seattleStore.customerPerHour());
-console.log(seattleStore.cookiesPerHour());
-console.log(seattleStore.cookieArray);
+// console.log(seattleStore.customerPerHour());
+// console.log(seattleStore.cookiesPerHour());
+// console.log(seattleStore.cookieArray);
+console.log(seattleStore.render()); // comes back as undefined in console log.hmmm....
