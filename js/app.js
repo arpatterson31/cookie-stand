@@ -24,7 +24,7 @@ let seattle = {
   // a method to render list items
   render: function() {
     for (let j = 0; j < this.cookieArray.length; j++){
-      let li = document.createElement(li);
+      let li = document.createElement('li');
       li.textContent = this.cookieArray[j];
       seattleList.appendChild(li);
     }
