@@ -8,8 +8,21 @@ let seattle = {
   name: 'Seattle',
   minCust: 23,
   maxCust: 65,
-  avgCookies: 6.3,
+  avgCookie: 6.3,
   // a method to calculate random number of customers per hour
+  customerPerHour: function () {
+    for (let i = 0; i < hours.length; i++){
+      return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+    }
+  },
   // a method to calculate and populate our number of cookies sold per hour array
-  // a methond to render list items
+  cookieArray: [],
+  cookiesPerHour: function (){
+    for (let j = 0; j <)
+    this.customerPerHour * this.avgCookie;
+  },
+  // a method to render list items
+  render: function() {
+    for (let i = 0; i < seattle.)
+  }
 };
