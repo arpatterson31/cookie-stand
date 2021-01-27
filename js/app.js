@@ -15,26 +15,28 @@ let seattleStore = {
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
   },
   // a method to calculate and populate our number of cookies sold per hour array
-  cookieArray: [],
+  cookieArray: [], // added array to use in render
   cookiesPerHour: function (){
     for (let i = 0; i < hours.length; i++){
-      this.cookieArray.push(Math.ceil(this.customerPerHour() * this.avgCookie));
+      this.cookieArray.push(Math.ceil(this.customerPerHour() * this.avgCookie)); // math.ceil rounds up so it corrected the NaN error I was seeing
     }
   },
   // a method to render list items
   render: function() {
+    this.cookiesPerHour(); // had to call method within this method to tell li.textcontent what to enter
     for (let i = 0; i < this.cookieArray.length; i++){
       // create element
       let li = document.createElement('li');
       // give it content
       li.textContent = `${hours[i]}: ${(this.cookieArray[i])} cookies`;
+      // add it
       seattleList.appendChild(li);
     }
-  }
+  },
 };
 
 seattleStore.render();
 // console.log(seattleStore.customerPerHour());
 // console.log(seattleStore.cookiesPerHour());
 // console.log(seattleStore.cookieArray);
-console.log(seattleStore.render()); // comes back as undefined in console log.hmmm....
+// console.log(seattleStore.render());
