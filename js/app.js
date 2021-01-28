@@ -55,3 +55,23 @@ let tokyoStore = {
   avgCookieBought: 1.2,
 };
 
+let dubaiStore = {
+  name: 'Dubai',
+  minCustomer: 11,
+  maxCustomer: 38,
+  avgCookieBought: 3.7,
+};
+
+let parisStore = {
+  name: 'Paris',
+  minCustomer: 20,
+  maxCustomer: 38,
+  avgCookieBought: 2.3,
+};
+
+let limaStore = {
+  name: 'Lima',
+  minCustomer: 2,
+  maxCustomer: 16,
+  avgCookieBought: 4.6,
+};
