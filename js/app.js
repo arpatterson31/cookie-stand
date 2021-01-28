@@ -59,12 +59,12 @@ let tokyoStore = {
     this.customerPerHour();
     for (let i = 0; i < hours.length; i++){
       this.cookieSoldArray.push(Math.ceil(this.customerPerHour() * this.avgCookieBought));
+      this.totalCookies = this.totalCookies + this.cookieSoldArray[i];
     }
   },
   render: function() {
     this.cookiesPerHour();
     for (let i = 0; i < this.cookieSoldArray.length; i++){
-      this.totalCookies = this.totalCookies + this.cookieSoldArray[i];
       let li = document.createElement('li');
       li.textContent = `${hours[i]}: ${(this.cookieSoldArray[i])} cookies`;
       tokyoList.appendChild(li);
@@ -89,12 +89,12 @@ let dubaiStore = {
     this.customerPerHour();
     for (let i = 0; i < hours.length; i++){
       this.cookieSoldArray.push(Math.ceil(this.customerPerHour() * this.avgCookieBought));
+      this.totalCookies = this.totalCookies + this.cookieSoldArray[i];
     }
   },
   render: function() {
     this.cookiesPerHour();
     for (let i = 0; i < this.cookieSoldArray.length; i++){
-      this.totalCookies = this.totalCookies + this.cookieSoldArray[i];
       let li = document.createElement('li');
       li.textContent = `${hours[i]}: ${(this.cookieSoldArray[i])} cookies`;
       dubaiList.appendChild(li);
@@ -119,12 +119,12 @@ let parisStore = {
     this.customerPerHour();
     for (let i = 0; i < hours.length; i++){
       this.cookieSoldArray.push(Math.ceil(this.customerPerHour() * this.avgCookieBought));
+      this.totalCookies = this.totalCookies + this.cookieSoldArray[i];
     }
   },
   render: function() {
     this.cookiesPerHour();
     for (let i = 0; i < this.cookieSoldArray.length; i++){
-      this.totalCookies = this.totalCookies + this.cookieSoldArray[i];
       let li = document.createElement('li');
       li.textContent = `${hours[i]}: ${(this.cookieSoldArray[i])} cookies`;
       parisList.appendChild(li);
@@ -149,12 +149,12 @@ let limaStore = {
     this.customerPerHour();
     for (let i = 0; i < hours.length; i++){
       this.cookieSoldArray.push(Math.ceil(this.customerPerHour() * this.avgCookieBought));
+      this.totalCookies = this.totalCookies + this.cookieSoldArray[i];
     }
   },
   render: function() {
     this.cookiesPerHour();
     for (let i = 0; i < this.cookieSoldArray.length; i++){
-      this.totalCookies = this.totalCookies + this.cookieSoldArray[i];
       let li = document.createElement('li');
       li.textContent = `${hours[i]}: ${(this.cookieSoldArray[i])} cookies`;
       limaList.appendChild(li);
