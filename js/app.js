@@ -45,14 +45,34 @@ let seattleStore = {
   },
 };
 
-seattleStore.render();
-
-
 let tokyoStore = {
   name: 'Tokyo',
   minCustomer: 3,
   maxCustomer: 24,
   avgCookieBought: 1.2,
+  customerPerHour: function () {
+    return Math.floor(Math.random() * (this.maxCustomer - this.minCustomer + 1) + this.minCustomer);
+  },
+  cookieSoldArray: [],
+  totalCookies: 0,
+  cookiesPerHour: function (){
+    this.customerPerHour();
+    for (let i = 0; i < hours.length; i++){
+      this.cookieSoldArray.push(Math.ceil(this.customerPerHour() * this.avgCookieBought));
+    }
+  },
+  render: function() {
+    this.cookiesPerHour();
+    for (let i = 0; i < this.cookieSoldArray.length; i++){
+      this.totalCookies = this.totalCookies + this.cookieSoldArray[i];
+      let li = document.createElement('li');
+      li.textContent = `${hours[i]}: ${(this.cookieSoldArray[i])} cookies`;
+      tokyoList.appendChild(li);
+    }
+    let totalSalesPrint = document.createElement('li');
+    totalSalesPrint.textContent = `Total: ${this.totalCookies} cookies`;
+    tokyoList.appendChild(totalSalesPrint);
+  },
 };
 
 let dubaiStore = {
@@ -60,6 +80,29 @@ let dubaiStore = {
   minCustomer: 11,
   maxCustomer: 38,
   avgCookieBought: 3.7,
+  customerPerHour: function () {
+    return Math.floor(Math.random() * (this.maxCustomer - this.minCustomer + 1) + this.minCustomer);
+  },
+  cookieSoldArray: [],
+  totalCookies: 0,
+  cookiesPerHour: function (){
+    this.customerPerHour();
+    for (let i = 0; i < hours.length; i++){
+      this.cookieSoldArray.push(Math.ceil(this.customerPerHour() * this.avgCookieBought));
+    }
+  },
+  render: function() {
+    this.cookiesPerHour();
+    for (let i = 0; i < this.cookieSoldArray.length; i++){
+      this.totalCookies = this.totalCookies + this.cookieSoldArray[i];
+      let li = document.createElement('li');
+      li.textContent = `${hours[i]}: ${(this.cookieSoldArray[i])} cookies`;
+      dubaiList.appendChild(li);
+    }
+    let totalSalesPrint = document.createElement('li');
+    totalSalesPrint.textContent = `Total: ${this.totalCookies} cookies`;
+    dubaiList.appendChild(totalSalesPrint);
+  },
 };
 
 let parisStore = {
@@ -67,6 +110,29 @@ let parisStore = {
   minCustomer: 20,
   maxCustomer: 38,
   avgCookieBought: 2.3,
+  customerPerHour: function () {
+    return Math.floor(Math.random() * (this.maxCustomer - this.minCustomer + 1) + this.minCustomer);
+  },
+  cookieSoldArray: [],
+  totalCookies: 0,
+  cookiesPerHour: function (){
+    this.customerPerHour();
+    for (let i = 0; i < hours.length; i++){
+      this.cookieSoldArray.push(Math.ceil(this.customerPerHour() * this.avgCookieBought));
+    }
+  },
+  render: function() {
+    this.cookiesPerHour();
+    for (let i = 0; i < this.cookieSoldArray.length; i++){
+      this.totalCookies = this.totalCookies + this.cookieSoldArray[i];
+      let li = document.createElement('li');
+      li.textContent = `${hours[i]}: ${(this.cookieSoldArray[i])} cookies`;
+      parisList.appendChild(li);
+    }
+    let totalSalesPrint = document.createElement('li');
+    totalSalesPrint.textContent = `Total: ${this.totalCookies} cookies`;
+    parisList.appendChild(totalSalesPrint);
+  },
 };
 
 let limaStore = {
@@ -74,4 +140,33 @@ let limaStore = {
   minCustomer: 2,
   maxCustomer: 16,
   avgCookieBought: 4.6,
+  customerPerHour: function () {
+    return Math.floor(Math.random() * (this.maxCustomer - this.minCustomer + 1) + this.minCustomer);
+  },
+  cookieSoldArray: [],
+  totalCookies: 0,
+  cookiesPerHour: function (){
+    this.customerPerHour();
+    for (let i = 0; i < hours.length; i++){
+      this.cookieSoldArray.push(Math.ceil(this.customerPerHour() * this.avgCookieBought));
+    }
+  },
+  render: function() {
+    this.cookiesPerHour();
+    for (let i = 0; i < this.cookieSoldArray.length; i++){
+      this.totalCookies = this.totalCookies + this.cookieSoldArray[i];
+      let li = document.createElement('li');
+      li.textContent = `${hours[i]}: ${(this.cookieSoldArray[i])} cookies`;
+      limaList.appendChild(li);
+    }
+    let totalSalesPrint = document.createElement('li');
+    totalSalesPrint.textContent = `Total: ${this.totalCookies} cookies`;
+    limaList.appendChild(totalSalesPrint);
+  },
 };
+
+seattleStore.render();
+tokyoStore.render();
+dubaiStore.render();
+parisStore.render();
+limaStore.render();
