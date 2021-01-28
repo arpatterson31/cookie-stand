@@ -5,6 +5,10 @@
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 let seattleList = document.getElementById('seattle');
+let tokyoList = document.getElementById('tokyo');
+let dubaiList = document.getElementById('dubai');
+let parisList = document.getElementById('paris');
+let limaList = document.getElementById('lima');
 
 let seattleStore = {
   name: 'Seattle',
@@ -19,6 +23,7 @@ let seattleStore = {
   cookieSoldArray: [], // added array to use in render
   totalCookies: 0, // do math to add the cookie array total
   cookiesPerHour: function (){
+    this.customerPerHour();
     for (let i = 0; i < hours.length; i++){
       this.cookieSoldArray.push(Math.ceil(this.customerPerHour() * this.avgCookieBought)); // math.ceil rounds up so it corrected the NaN error I was seeing
     }
@@ -42,3 +47,11 @@ seattleStore.render();
 // console.log(seattleStore.cookiesPerHour());
 // console.log(seattleStore.cookieArray);
 // console.log(seattleStore.render());
+
+let tokyoStore = {
+  name: 'Tokyo',
+  minCustomer: 3,
+  maxCustomer: 24,
+  avgCookieBought: 1.2,
+};
+
