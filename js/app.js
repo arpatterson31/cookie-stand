@@ -32,21 +32,21 @@ let seattleStore = {
   render: function() {
     this.cookiesPerHour(); // had to call method within this method to tell li.textcontent what to enter
     for (let i = 0; i < this.cookieSoldArray.length; i++){
+      this.totalCookies = this.totalCookies + this.cookieSoldArray[i];
       // create element
       let li = document.createElement('li');
       // give it content
       li.textContent = `${hours[i]}: ${(this.cookieSoldArray[i])} cookies`;
-      // add it
       seattleList.appendChild(li);
     }
+    let totalSalesPrint = document.createElement('li');
+    totalSalesPrint.textContent = `Total: ${this.totalCookies} cookies`;
+    seattleList.appendChild(totalSalesPrint);
   },
 };
 
 seattleStore.render();
-// console.log(seattleStore.customerPerHour());
-// console.log(seattleStore.cookiesPerHour());
-// console.log(seattleStore.cookieArray);
-// console.log(seattleStore.render());
+
 
 let tokyoStore = {
   name: 'Tokyo',
