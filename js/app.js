@@ -26,13 +26,13 @@ let seattleStore = {
     this.customerPerHour();
     for (let i = 0; i < hours.length; i++){
       this.cookieSoldArray.push(Math.ceil(this.customerPerHour() * this.avgCookieBought)); // math.ceil rounds up so it corrected the NaN error I was seeing
+      this.totalCookies = this.totalCookies + this.cookieSoldArray[i]; // math to calculate my total cookies
     }
   },
   // a method to render list items
   render: function() {
     this.cookiesPerHour(); // had to call method within this method to tell li.textcontent what to enter
     for (let i = 0; i < this.cookieSoldArray.length; i++){
-      this.totalCookies = this.totalCookies + this.cookieSoldArray[i];
       // create element
       let li = document.createElement('li');
       // give it content
