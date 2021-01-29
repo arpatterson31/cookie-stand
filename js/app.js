@@ -23,7 +23,6 @@ let seattleStore = {
   cookieSoldArray: [], // added array to use in render
   totalCookies: 0, // do math to add the cookie array total
   cookiesPerHour: function (){
-    this.customerPerHour();
     for (let i = 0; i < hours.length; i++){
       this.cookieSoldArray.push(Math.ceil(this.customerPerHour() * this.avgCookieBought)); // math.ceil rounds up so it corrected the NaN error I was seeing
       this.totalCookies = this.totalCookies + this.cookieSoldArray[i]; // math to calculate my total cookies
@@ -56,7 +55,6 @@ let tokyoStore = {
   cookieSoldArray: [],
   totalCookies: 0,
   cookiesPerHour: function (){
-    this.customerPerHour();
     for (let i = 0; i < hours.length; i++){
       this.cookieSoldArray.push(Math.ceil(this.customerPerHour() * this.avgCookieBought));
       this.totalCookies = this.totalCookies + this.cookieSoldArray[i];
@@ -86,7 +84,6 @@ let dubaiStore = {
   cookieSoldArray: [],
   totalCookies: 0,
   cookiesPerHour: function (){
-    this.customerPerHour();
     for (let i = 0; i < hours.length; i++){
       this.cookieSoldArray.push(Math.ceil(this.customerPerHour() * this.avgCookieBought));
       this.totalCookies = this.totalCookies + this.cookieSoldArray[i];
@@ -116,7 +113,6 @@ let parisStore = {
   cookieSoldArray: [],
   totalCookies: 0,
   cookiesPerHour: function (){
-    this.customerPerHour();
     for (let i = 0; i < hours.length; i++){
       this.cookieSoldArray.push(Math.ceil(this.customerPerHour() * this.avgCookieBought));
       this.totalCookies = this.totalCookies + this.cookieSoldArray[i];
@@ -146,7 +142,6 @@ let limaStore = {
   cookieSoldArray: [],
   totalCookies: 0,
   cookiesPerHour: function (){
-    this.customerPerHour();
     for (let i = 0; i < hours.length; i++){
       this.cookieSoldArray.push(Math.ceil(this.customerPerHour() * this.avgCookieBought));
       this.totalCookies = this.totalCookies + this.cookieSoldArray[i];
