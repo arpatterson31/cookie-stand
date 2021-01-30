@@ -35,3 +35,7 @@ body {
 #lima {
   padding-bottom: 15px;
 }
+
+#cookie-table, th, td, tr {
+  border: 1px solid #471e0a;
+}
