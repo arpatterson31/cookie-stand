@@ -1,17 +1,18 @@
 /* Google font - font-family: 'Advent Pro', sans-serif;  */
 
 body {
-  background-color: #d1c5b8;
   color: #392b1b;
 }
 
 #main-body {
   font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #d1c5b8;
 }
 
 #sales-body {
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
+  background-color: #d1a77c;
 }
 
 #seattle {
