@@ -4,6 +4,11 @@ body {
   color: #392b1b;
 }
 
+h1 {
+  font-size: x-large;
+  padding: 15px;
+}
+
 #main-body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: #d1c5b8;
@@ -13,6 +18,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
   background-color: #d1a77c;
+  width: 960px;
 }
 
 #seattle {
@@ -36,6 +42,33 @@ body {
   padding-bottom: 15px;
 }
 
-#cookie-table, th, td, tr {
-  border: 1px solid #471e0a;
+#cookie-table {
+  border: 2px solid #471e0a;
+  padding: 3px;
+}
+
+th {
+  font-weight: bolder;
+  border: 2px solid #471e0a;
+  padding: 3px;
+}
+
+tr {
+  border: 2px solid #471e0a;
+  padding: 3px;
+}
+
+td {
+  border: 2px solid #471e0a;
+  padding: 3px;
+}
+
+#table-header, #table-footer {
+  font-weight: bolder;
+  border: 2px solid #471e0a;
+  padding: 3px;
+}
+
+td:last-child {
+  text-align: center;
 }
