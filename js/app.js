@@ -3,6 +3,8 @@
 let cookieTable = document.getElementById('cookie-table');
 let tableHeader = document.getElementById('table-header');
 let tableFooter = document.getElementById('table-footer');
+// let tableBody = document.getElementById('table-body');
+
 const allStores = [];
 
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
@@ -48,7 +50,6 @@ CookieStore.prototype.render = function() {
 
 function renderHeader(){
   let tr = document.createElement('tr');
-  tableHeader.appendChild(tr);
   let th = document.createElement('th');
   th.textContent = '';
   tr.appendChild(th);
@@ -60,22 +61,45 @@ function renderHeader(){
   let td = document.createElement('td');
   td.textContent = 'Daily Store Totals';
   tr.appendChild(td);
+  tableHeader.appendChild(tr);
+}
+
+
+// TA Bryant helped build out this part of the stretch goal
+function getGrandtotals(){
+  const grandTotals = new Array(hours.length + 1);
+  grandTotals.fill(0);
+  for (let i = 0; i < allStores.length; i++){
+  // console.log(allStores[i]);
+    for (let j = 0; j < allStores[i].cookieSoldArray.length; j++){
+      grandTotals[j] += allStores[i].cookieSoldArray[j];
+      grandTotals[grandTotals.length - 1] += allStores[i].cookieSoldArray[j];
+    // console.log(allStores[i].cookieSoldArray[j]);
+    // console.log(grandTotals);
+    }
+  }
+  return grandTotals;
 }
 
 function renderFooter(){
+  let grandTotals = getGrandtotals();
   let tr = document.createElement('tr');
-  tableFooter.appendChild(tr);
   let th = document.createElement('th');
   th.textContent = 'Totals';
   tr.appendChild(th);
-
+  for (let i = 0; i < grandTotals.length; i++){
+    let td = document.createElement('td');
+    td.textContent = grandTotals[i];
+    tr.appendChild(td);
+  }
+  tableFooter.appendChild(tr);
 }
 
-let seattleStore = new CookieStore('Seattle', 23, 65, 6.3);
-let tokyoStore = new CookieStore('Tokyo', 3, 24, 1.2);
-let dubaiStore = new CookieStore('Dubai', 11, 38, 3.7);
-let parisStore = new CookieStore('Paris', 20, 38, 2.3);
-let limaStore = new CookieStore('Lima', 2, 16, 4.6);
+const seattleStore = new CookieStore('Seattle', 23, 65, 6.3);
+const tokyoStore = new CookieStore('Tokyo', 3, 24, 1.2);
+const dubaiStore = new CookieStore('Dubai', 11, 38, 3.7);
+const parisStore = new CookieStore('Paris', 20, 38, 2.3);
+const limaStore = new CookieStore('Lima', 2, 16, 4.6);
 
 function renderAll(){
   for (let i = 0; i < allStores.length; i++){
