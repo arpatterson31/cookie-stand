@@ -3,10 +3,8 @@
 let cookieTable = document.getElementById('cookie-table');
 let tableHeader = document.getElementById('table-header');
 let tableFooter = document.getElementById('table-footer');
-// let tableBody = document.getElementById('table-body');
 
 const allStores = [];
-
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 function CookieStore(name, minCustomer, maxCustomer, avgCookieBought){
@@ -65,7 +63,7 @@ function renderHeader(){
 }
 
 
-// TA Bryant helped build out this part of the stretch goal
+// TA Bryant helped build out this function as part of the stretch goal
 function getGrandtotals(){
   const grandTotals = new Array(hours.length + 1);
   grandTotals.fill(0);
@@ -95,11 +93,11 @@ function renderFooter(){
   tableFooter.appendChild(tr);
 }
 
-const seattleStore = new CookieStore('Seattle', 23, 65, 6.3);
-const tokyoStore = new CookieStore('Tokyo', 3, 24, 1.2);
-const dubaiStore = new CookieStore('Dubai', 11, 38, 3.7);
-const parisStore = new CookieStore('Paris', 20, 38, 2.3);
-const limaStore = new CookieStore('Lima', 2, 16, 4.6);
+new CookieStore('Seattle', 23, 65, 6.3);
+new CookieStore('Tokyo', 3, 24, 1.2);
+new CookieStore('Dubai', 11, 38, 3.7);
+new CookieStore('Paris', 20, 38, 2.3);
+new CookieStore('Lima', 2, 16, 4.6);
 
 function renderAll(){
   for (let i = 0; i < allStores.length; i++){
