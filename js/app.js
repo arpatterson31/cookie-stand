@@ -3,6 +3,7 @@
 let cookieTable = document.getElementById('cookie-table');
 let tableHeader = document.getElementById('table-header');
 let tableFooter = document.getElementById('table-footer');
+let tableBody = document.getElementById('table-body');
 
 const allStores = [];
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
@@ -31,8 +32,6 @@ CookieStore.prototype.cookiesPerHour = function (){
 CookieStore.prototype.render = function() {
   this.cookiesPerHour();
   let tr = document.createElement('tr');
-  cookieTable.appendChild(tr);
-
   let th = document.createElement('th');
   th.textContent = this.name;
   tr.appendChild(th);
@@ -44,6 +43,7 @@ CookieStore.prototype.render = function() {
   let td = document.createElement('td');
   td.textContent = this.totalCookies;
   tr.appendChild(td);
+  tableBody.appendChild(tr);
 };
 
 function renderHeader(){
