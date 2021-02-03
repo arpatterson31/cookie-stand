@@ -1,14 +1,7 @@
 /* Google font - font-family: 'Advent Pro', sans-serif;  */
 /* Google Font - font-family: 'Rokkitt', serif; */
 
-body {
-  color: #392b1b;
-}
-
-h1 {
-  font-family: 'Advent Pro', sans-serif;
-}
-
+/* entire documents */
 #main-body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: #ffa175;
@@ -20,6 +13,40 @@ h1 {
   background-color: #d1a77c;
   width: 960px;
 }
+
+/* header */
+header {
+  background-color: #648898;
+  height: 100px;
+  
+}
+
+nav {
+  width: 960px;
+  /* margin: auto; */
+}
+
+header span {
+  display: inline-block;
+  line-height: 100px;
+  margin-left: 90px;
+}
+
+header a {
+  text-decoration: none;
+  color: #ded494;
+  font-size: 20px;
+}
+
+/* main */
+main h1 {
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: #6a6884;
+  font-weight: bolder;
+}
+
 
 #cookie-table {
   border: 2px solid #b76a40;
