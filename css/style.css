@@ -6,13 +6,12 @@ body {
 }
 
 h1 {
-  font-size: x-large;
-  padding: 15px;
+  font-family: 'Advent Pro', sans-serif;
 }
 
 #main-body {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: #d1c5b8;
+  background-color: #ffa175;
 }
 
 #sales-body {
