@@ -4,15 +4,14 @@
 /* entire documents */
 #main-body {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: #ffa175;
+  background-color: #dd9977;
 }
 
 #sales-body {
   font-family: Arial, Helvetica, sans-serif;
-  margin: auto;
   background-color: #d1a77c;
-  width: 960px;
 }
+
 
 /* header */
 header {
@@ -66,18 +65,35 @@ h1 {
   font-weight: 900;
 }
 
+section h2 {
+  font-family: 'Rokkitt', serif;
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
 
 #locations {
+  margin-top: 30px;
   display: inline-block;
-  border: 2px solid black;
   margin-left: 30px;
+}
+
+#locations li {
+  margin: 5px 0;
+}
+
+#locations li:last-child {
+  font-weight: bolder;
 }
 
 #contact {
   width: 480px;
-  border: 2px solid black;
   float: right;
   margin-top: 30px;
+}
+
+#contact li {
+  margin: 5px 0;
 }
 
 #images li:first-child {
@@ -88,9 +104,19 @@ h1 {
   float: left;
 }
 
+
+
+
+
+
+
+
+
+
 /* table on sales sheet */
 
 #cookie-table {
+  margin-top: 30px;
   border: 2px solid #b76a40;
   padding: 3px;
 }
