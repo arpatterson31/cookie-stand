@@ -85,6 +85,7 @@ section h2 {
   overflow: auto;
   line-height: 25px;
 }
+
 #family h2 {
   text-decoration: underline;
   padding-bottom: 5px;
@@ -96,12 +97,10 @@ section h2 {
   margin-top: 60px;
 }
 
-
 #locations {
   margin-top: 75px;
   margin-left: 300px;
   height: 300px;
-  
 }
 
 #locations h2 {
@@ -120,7 +119,7 @@ section h2 {
 
 
 #images li:first-child {
-  margin-left: 0px;
+  margin-left: 15px;
 }
 
 #images li {
@@ -133,7 +132,7 @@ section h2 {
 #shirt h2 {
   font-family: 'Montserrat Alternates', sans-serif;
   padding-top: 50px;
-  margin-left: 150px;
+  margin-left: 95px;
   clear: both;
 }
 
