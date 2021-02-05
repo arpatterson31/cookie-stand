@@ -27,7 +27,7 @@ header span {
 }
 
 header img {
-  height: 75px;
+  height: 70px;
   padding: 10px
 }
 
@@ -39,8 +39,8 @@ nav {
 
 nav span {
   display: inline-block;
-  line-height: 30px;
-  margin-top: 30px;
+  line-height: 5px;
+  margin-top: 15px;
   margin-left: 90px;
   padding-bottom: 15px;
 }
@@ -72,9 +72,31 @@ section h2 {
   margin-bottom: 5px;
 }
 
-#locations {
-  margin-top: 30px;
+#family {
+  margin-top: 45px;
   display: inline-block;
+  width: 400px;
+  height: 250px;
+  overflow: auto;
+  line-height: 25px;
+}
+
+#family-pic {
+  display: inline block;
+  width: 550px;
+  margin-top: 60px;
+}
+
+
+#locations {
+  margin-top: 75px;
+  margin-left: 300px;
+  height: 300px;
+  
+}
+
+#locations h2 {
+  text-decoration: underline;
 }
 
 #locations li {
@@ -86,31 +108,6 @@ section h2 {
   text-decoration: underline;
 }
 
-#contact {
-  width: 480px;
-  float: right;
-  margin-top: 30px;
-}
-
-#contact li {
-  margin: 5px 0;
-}
-
-#family {
-  margin-top: 45px;
-  display: inline-block;
-  width: 400px;
-  height: 250px;
-  overflow: auto;
-  line-height: 25px;
-
-}
-
-#family-pic {
-  display: inline block;
-  width: 550px;
-  margin-top: 60px;
-}
 
 #images li:first-child {
   margin-left: 0px;
@@ -131,10 +128,24 @@ footer {
   height: 100px;
   margin-top: 30px;
   clear: both;
-  }
+}
   
+#contact {
+    width: 480px;
+    float: left;
+}
+  
+#contact li {
+    margin: 5px 0;
+}
 
+#contact h2 {
+  text-decoration: underline;
+}
 
+footer p {
+  float: right;
+}
 
 /* table on sales sheet */
 
@@ -169,6 +180,4 @@ td {
 
 td:last-child {
   text-align: center;
-  background-color: 
 }
-
