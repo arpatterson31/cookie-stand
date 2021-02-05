@@ -1,14 +1,15 @@
-/* Google font - font-family: 'Advent Pro', sans-serif;  */
-/* Google Font - font-family: 'Rokkitt', serif; */
+/* Google fonts: font-family: 'Cutive', serif; */
+/* Google font: font-family: 'Montserrat Alternates', sans-serif; */
+/* Google font: font-family: 'Berkshire Swash', cursive; */
 
 /* entire documents */
 #main-body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Cutive', serif;
   background-color: #dd9977;
 }
 
 #sales-body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat Alternates', sans-serif;
   background-color: #d1a77c;
 }
 
@@ -33,14 +34,12 @@ header img {
 
 nav {
   background-color: #6a6884;
-  /* margin: auto; */
-
 }
 
 nav span {
   display: inline-block;
   line-height: 5px;
-  margin-top: 15px;
+  margin-top: 20px;
   margin-left: 90px;
   padding-bottom: 15px;
 }
@@ -58,7 +57,7 @@ main {
 }
 
 h1 {
-  font-family: 'Advent Pro', sans-serif;
+  font-family: 'Montserrat Alternates', sans-serif;
   font-size: 50px;
   text-align: center;
   color: #6a6884;
@@ -71,7 +70,7 @@ div {
 }
 
 section h2 {
-  font-family: 'Rokkitt', serif;
+  font-family: 'Berkshire Swash', cursive;
   font-size: 35px;
   font-weight: bold;
   margin-bottom: 5px;
@@ -88,6 +87,7 @@ section h2 {
 }
 #family h2 {
   text-decoration: underline;
+  padding-bottom: 5px;
 }
 
 #family-pic {
@@ -109,7 +109,7 @@ section h2 {
 }
 
 #locations li {
-  margin: 5px 0;
+  margin: 10px 0;
 }
 
 #locations li:last-child {
@@ -131,6 +131,7 @@ section h2 {
 }
 
 #shirt h2 {
+  font-family: 'Montserrat Alternates', sans-serif;
   padding-top: 50px;
   margin-left: 150px;
   clear: both;
@@ -145,6 +146,7 @@ section h2 {
   text-decoration: none;
   color: salmon;
 }
+
 #shirt a:hover {
   background-color: #6a6884;
   transition: 350ms;
@@ -153,12 +155,13 @@ section h2 {
 /* footer */
 footer {
   background-color: #648898;
-  height: 100px;
+  height: 120px;
   clear: both;
 }
   
 #contact {
     width: 480px;
+    margin-top: 5px;
     float: left;
 }
   
@@ -171,6 +174,7 @@ footer {
 }
 
 footer p {
+  margin-top: 10px;
   float: right;
 }
 
@@ -180,7 +184,8 @@ footer p {
   margin-top: 30px;
   border: 2px solid #e98b57;
   padding: 3px;
-  background-color: #ffa175;
+  background-color: #f9b393;
+  color: #9e724e;
 }
 
 th {
