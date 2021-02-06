@@ -110,6 +110,8 @@ function handleSubmit(event){
 
   let newStore = new CookieStore(newLocation, newMinCust, newMaxCust, newAvgCookie);
   newStore.render();
+  tableFooter.removeChild(tableFooter.lastChild);
+  renderFooter();
 }
 
 new CookieStore('Seattle', 23, 65, 6.3);
