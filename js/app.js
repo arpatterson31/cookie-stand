@@ -94,29 +94,36 @@ function renderFooter(){
   tableFooter.appendChild(tr);
 }
 
-new CookieStore('Seattle', 23, 65, 6.3);
-new CookieStore('Tokyo', 3, 24, 1.2);
-new CookieStore('Dubai', 11, 38, 3.7);
-new CookieStore('Paris', 20, 38, 2.3);
-new CookieStore('Lima', 2, 16, 4.6);
-
 function renderAll(){
   for (let i = 0; i < allStores.length; i++){
     allStores[i].render();
   }
 }
 
-renderAll();
-renderHeader();
-renderFooter();
-
-
 function handleSubmit(event){
   event.preventDefault();
 
-  let newStore = event.target.newstore.value;
+  let newLocation = event.target.newlocation.value;
+  let newMinCust = +event.target.mincustomer.value;
+  let newMaxCust = +event.target.maxcustomer.value;
+  let newAvgCookie = +event.target.avgcookie.value;
+
+  let newStore = new CookieStore(newLocation, newMinCust, newMaxCust, newAvgCookie);
+  newStore.render();
+
 }
 
+new CookieStore('Seattle', 23, 65, 6.3);
+new CookieStore('Tokyo', 3, 24, 1.2);
+new CookieStore('Dubai', 11, 38, 3.7);
+new CookieStore('Paris', 20, 38, 2.3);
+new CookieStore('Lima', 2, 16, 4.6);
+
+
+
+renderAll();
+renderHeader();
+renderFooter();
 
 
 
