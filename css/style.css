@@ -212,3 +212,21 @@ td {
 td:last-child {
   text-align: center;
 }
+
+/* form styling */
+
+form {
+  margin-top: 30px;
+}
+
+legend {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+input {
+  border-radius: 4px;
+  display: list-item;
+  margin-bottom: 10px;
+}
+
