@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cutive&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
   </head>
   <body id="sales-body">
     <header>
@@ -24,6 +26,29 @@
       </nav>
     </header>
     <main>
+      <form id="form">
+        <fieldset>
+          <legend>New Store Submission Form</legend>
+
+            <label for="newlocation">New Store Location</label>
+            <input type="text" name="newlocation" required="required">
+
+            <label for="mincustomer">Minimum Customers Per Hour</label>
+            <input type="number" min="0" name="mincustomer" required="required">
+
+            <label for="maxcustomer">Maximum Customers Per Hour</label>
+            <input type="number" min="0" name="maxcustomer" required="required">
+
+            <label for="avgcookie">Average # of Cookies Bought by Customer</label>
+            <input type="number" min="0" name="avgcookie" required="required">
+
+
+            <button type="submit">Submit</button>
+
+        </fieldset>
+
+      </form>
+
       <table id="cookie-table">
         <thead id="table-header"></thead>
         <tbody id="table-body"></tbody>

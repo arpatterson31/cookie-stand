@@ -212,3 +212,29 @@ td {
 td:last-child {
   text-align: center;
 }
+
+/* form styling */
+
+form {
+  margin-top: 30px;
+}
+
+legend {
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 30px;
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+
+input {
+  border-radius: 5px;
+  display: list-item;
+  margin-bottom: 10px;
+}
+
+form button {
+  background-color: #6a6884;
+  color: #ded494;
+  border-radius: 5px;
+}
+

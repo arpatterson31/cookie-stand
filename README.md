@@ -7,11 +7,13 @@ This is my lab 06 project to build a cookie stand for a client. It will include 
 ### Author: Audrey Patterson
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
+
 * [Math code assistance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
 * [Math code assistance for total cookie sold](https://www.tutorialspoint.com/Java-program-to-find-the-sum-of-elements-of-an-array)
+* [W3Schools - removing child from the dom](https://www.w3schools.com/jsref/met_node_removechild.asp)
 
 ### Reflections and Comments
+
 * Consider including the answers to your daily journal and submission questions here
 * This is also a good place to reflect on the tools and resources used and learned
 
